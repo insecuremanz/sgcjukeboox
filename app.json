@@ -1,0 +1,87 @@
+{
+  "name": "lowkeyMusix",
+  "logo": "https://telegra.ph/file/52247bfeb670a09a68851.jpg",
+  "description": "bot to play songs in your Telegram's Group Voice Chat..",
+  "keywords": ["music", "voicechat", "telegram"],
+  "repository": "https://github.com/insecuremanz/lowkeymusix",
+  "stack": "heroku-20",
+  "buildpacks": [
+   {
+     "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+   },
+   {
+     "url": "heroku/python"
+   }   
+  ],        
+  "env": {
+    "SESSION_NAME": {
+      "description": "session string buka dari sini https://replit.com/@ChankitSaini/GenerateStringSession",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "bot token dari @BotFather",
+      "required": true
+    },
+    "BOT_USERNAME": {
+      "description": "username botnya ga usah pake @",
+      "required": true
+    },
+    "BOT_NAME": {
+      "description": "nama asisten bot musicnya.",
+      "required": false,
+      "value": ""
+    },
+    "SUPPORT_GROUP": {
+      "description": "group chat lu tanpa @ [kalo ga punya di skip aja]",
+      "required": false,
+      "value": "sobatgabutz"
+    },
+    "PROJECT_NAME": {
+      "description": "nama project musicnya.",
+      "required": false,
+      "value": "lowkeyMusix "
+    },
+    "ASSISTANT_NAME": {
+      "description": "username asisten bot musicnya tanpa @.",
+      "required": true
+    },
+    "ARQ_API_KEY": {
+      "description": "api key dari @ARQRobot telegram.",
+      "required": false,
+      "value": ""
+    },    
+    "BG_IMAGE": {
+      "description": "background buat cover music (pakai yang transparant) [skip kalo ga punya].",
+      "required": false,
+      "value": " https://telegra.ph/file/a8c7df44e848674930a2d.png"
+    },     
+    "UPDATES_CHANNEL": {
+      "description": "channel group lu tanpa @ [kalau ga ada skip aja].",
+      "required": false,
+      "value": "sobatgabutzz"
+    },    
+    "API_ID": {
+      "description": "App ID buka di my.telegram.org/apps",
+      "required": true
+    },
+    "PMPERMIT": {
+      "description": "Change to turn off",
+      "required": false,
+      "value": "ENABLE"
+    },    
+    "API_HASH": {
+      "description": "App hash ambil dari my.telegram.org/apps",
+      "required": true
+    },
+    "SUDO_USERS": {
+      "description": "list id buat ngatur botnya di semua group (pisahin pakai space).",
+      "required": true
+      "value": "1182313365 1721510826"
+    },
+    "DURATION_LIMIT": {
+      "description": "limit durasi download (minutes).",
+      "required": true,
+      "value": "10"
+    }
+  }
+}
